@@ -60,6 +60,7 @@ A thorough Crime Prediction Model is presented by Team Sherlocked to predict cri
 
 
    <iframe width="560" height="315" src="https://github.com/sdjbabin/Surakshan/assets/137878044/65f5ff11-c00d-4e1b-9179-91eb9b9cf78a" frameborder="0" allowfullscreen autoplay muted loop>         </iframe>
+![plz](https://github.com/sdjbabin/Surakshan/assets/137878044/fbc5c793-1049-42d5-8b07-c4c8bb6bfeea)
 
 
 
