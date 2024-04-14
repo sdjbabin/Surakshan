@@ -58,7 +58,7 @@ A thorough Crime Prediction Model is presented by Team Sherlocked to predict cri
      ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/8d8a6a58-5910-489e-9b4a-155a9260cae2)
 
    - Crime Dashboard
-     ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/42f6472c-ed87-42c8-8672-39f58a9e9f11)
+      ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/58084fb2-ab81-412e-8fb9-cafb9b34c76d)
 
    - Police Beat Dashboard
 
