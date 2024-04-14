@@ -1,39 +1,56 @@
-<img src="https://github.com/sdjbabin/Surakshan/assets/137878044/46a0a472-c34b-46cf-87e1-23da4c1dc6fd" alt="image" width="300" height="300" align="center">
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/46a0a472-c34b-46cf-87e1-23da4c1dc6fd)
+
 ~ AI based model to analyze and predict crimes in Karnataka
-
-
-
 
 ## Table of Contents
 
+- [Running the website](#running-the-website)
+- [Introduction](#introduction)
 - [About](#about)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Dashboard Analyzing Crime Data](#dashboard-analyzing-crime-data)
+- [Machine Learning Models](#machine-learning-models)
+- [Apriori Algorithm](#apriori-algorithm)
+- [DBSCAN Clustering](#dbscan-clustering)
+- [Deep Learning Model](#deep-learning-model)
+- [Conclusion](#conclusion)
+- [Contact Us](#contact-us)
+
+## Running the website
+
+Provide instructions on how to run the website.
+
+## Introduction
+
+Provide a brief introduction to the project.
 
 ## About
 
-Provide a more detailed description of your project. Explain what it does, why it's useful, and any other relevant information.
+Explain what your project does, why it's useful, and any other relevant information.
 
-## Installation
+## Dashboard Analyzing Crime Data
 
-Describe how to install your project, including any dependencies that need to be installed. Provide step-by-step instructions if necessary.
+Describe the dashboard feature for analyzing crime data.
 
-## Usage
+## Machine Learning Models
 
-Explain how to use your project, including any commands or configuration options. Provide examples if possible.
+Discuss the machine learning models used in the project.
 
-## Contributing
+## Apriori Algorithm
 
-Explain how others can contribute to your project. This could include guidelines for submitting bug reports, feature requests, or pull requests.
+Explain the Apriori Algorithm implementation.
 
-## License
+## DBSCAN Clustering
 
-Specify the license under which your project is distributed. For example, you could use the MIT License, GNU General Public License, or another open-source license.
+Describe the DBSCAN clustering algorithm used in the project.
 
-## Screenshots and Demo
+## Deep Learning Model
 
-![Project Logo](https://example.com/logo.png)
+Discuss the deep learning model used in the project.
 
-![Project Demo](https://example.com/demo.gif)
+## Conclusion
+
+Summarize the project and its findings.
+
+## Contact Us
+
+Provide contact information for further inquiries or collaboration opportunities.
