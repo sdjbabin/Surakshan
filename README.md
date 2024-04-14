@@ -44,37 +44,59 @@ A thorough Crime Prediction Model is presented by Team Sherlocked to predict cri
 
 ## Components 
 
-1. Interactive Dashboard
-   a. Criminal Dashboard
-   b. Victim Dashboard
-   c. Crime Dashboard
-   d. Police Beat Dashboard
+1. **Interactive Dashboard**
+   - Criminal Dashboard
+   - Victim Dashboard
+   - Crime Dashboard
+   - Police Beat Dashboard
 
-2. Crime Watch : Animated Crime Hotspots Visualization 
+2. **Crime Watch**: Animated Crime Hotspots Visualization 
 
-3. Predictive Analytics
-   a. Accused-Victim Demographics
-   b. Crime Time
-   c. Crime Hotspots
-   d. Crime Type
+3. **Predictive Analytics**
+   - Accused-Victim Demographics
+   - Crime Time
+   - Crime Hotspots
+   - Crime Type
 
- 4. Beat Optimization
+4. **Beat Optimization**
+
     
 ## Dashboard Analyzing Crime Data
 
-Describe the dashboard feature for analyzing crime data.
+The dashboard feature for analyzing crime data includes four main components:
+
+1. **Criminal Dashboard**: This dashboard provides insights into criminal activities, such as the types of crimes committed, frequency, and trends over time.
+
+2. **Victim Dashboard**: Here, users can analyze victim-related data, including demographics, types of victimization, and geographical distribution.
+
+3. **Crime Dashboard**: This dashboard focuses on overall crime statistics, including crime rates, crime categories, and their spatial and temporal patterns.
+
+4. **Police Beat Dashboard**: Users can explore police beat-related data, such as patrol routes, response times, and crime prevention measures implemented in different areas.
+
 
 ## Machine Learning Models
 
-Discuss the machine learning models used in the project.
+In this project, we have utilized the Naïve Bayes machine learning model for crime prediction. After evaluating various machine learning algorithms, including decision trees, logistic regression, and support vector machines, we found that the Naïve Bayes model consistently provided superior predictions and accuracy compared to other models.
+
+The Naïve Bayes algorithm is particularly well-suited for this task due to its simplicity, efficiency, and ability to handle large datasets with categorical features. It is based on the principle of Bayes' theorem, which calculates the probability of a hypothesis given the evidence.
+
+
+
 
 ## Apriori Algorithm
 
-Explain the Apriori Algorithm implementation.
+Our goal of using this model is to find all possible crime frequent patterns regardless of the committed crime type. Hence, we implemented the Apriori algorithm on location and time features and excluded the crime type feature. Additionally, to obtain more frequent patterns we applied constraint-based mining by restricting the extraction process on the frequent patterns having this formula of three specific item sets (Crime Type, Day,Time). Then we selected the optimum choice.
+For Karnataka, the minimum support value was 0.008, which corresponds to 277 absolute frequencies.
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/e4157ba7-9ad5-4af1-89e3-9123f70344a6)
+
 
 ## DBSCAN Clustering
 
-Describe the DBSCAN clustering algorithm used in the project.
+Clustering of crimes within each of 40 districts was performed for the time periods 2016-18,2019-21,2022-23, and temporal changes in cluster distributions were analyzed.
+
+Define Systemic crime to be a district in which the crime clusters have not changed in geography over time.
+
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/7eac6f10-790c-4bcc-98bc-80bcdc3fc538)
 
 ## Deep Learning Model
 
