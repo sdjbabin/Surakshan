@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Prediction</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+        .cont {
+            width: 100%;
+            display: flex;
+            padding: 50px;
+            background-color: black;
+        }
+
+
+
+        #map2, #map1 {
+            height: 325px;
+            width: 50%;
+            margin-left: 10%;
+            margin-top: 5%;
+            /* Adjust width as needed */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: black;
+
+            width: 100%;
+        }
+
+        .card1 {
+            background-color: rgb(2, 2, 2, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 60%;
+            padding: 20px;
+            color: #f5eded;
+            z-index: 9999;
+
+        }
+
+        .card1 h1 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin-bottom: 20px;
+            font-weight: bold;
+
+        }
+
+        .card1 form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .card1 form label {
+            margin-bottom: 8px;
+            color: wheat;
+        }
+
+        .card1 form select,
+        .card1 form input[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #dfe6e9;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #2d3436;
+        }
+
+        .card1 form input[type="submit"] {
+            background-color: #2980b9;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card1 form input[type="submit"]:hover {
+            background-color: #2c3e50;
+        }
+
+        #prediction-result {
+            margin-top: 20px;
+            background-color: rgba(11, 11, 11, 0.171);
+            /* Translucent black background */
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            border: 2px solid;
+            border-radius: 10px;
+            border-color: white;
+        }
+
+        #prediction-result h2 {
+            margin-top: 0;
+            
+        }
+
+        #prediction-result p {
+            margin-bottom: 10px;
+
+        }
+
+        .time {
+            display: flex;
+
+        }
+
+        .day {
+            margin-left: 5%;
+        }
+
+
+        .b1 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg, rgb(67, 4, 4), rgb(94, 3, 3));
+            filter: blur(80px);
+
+        }
+
+        .b2 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg, rgb(67, 4, 4), rgb(94, 3, 3));
+            filter: blur(80px);
+            top: 450px;
+            z-index: 0;
+        }
+
+        .b3 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg, rgb(67, 4, 4), rgb(94, 3, 3));
+            filter: blur(80px);
+            left: 1250px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="b1"></div>
+        <div class="b3"></div>
+        <div class="card1">
+            <h1>Crime Prediction</h1>
+            <form id="crime-form">
+                <label for="area">Area:</label>
+                <select id="area" name="Area">
+                    <option value="Bagalkot">Bagalkot</option>
+                    <option value="Koppal">Koppal</option>
+                    <option value="Dharwad">Dharwad</option>
+                    <option value="Gadag">Gadag</option>
+                    <option value="Haveri">Haveri</option>
+                    <option value="Hubballi Dharwad City">Hubballi Dharwad City</option>
+                    <option value="Ballari">Ballari</option>
+                    <option value="Belagavi Dist">Belagavi Dist</option>
+                    <option value="Bengaluru City">Bengaluru City</option>
+                    <option value="Bengaluru Dist">Bengaluru Dist</option>
+                    <option value="Chamarajanagar">Chamarajanagar</option>
+                    <option value="Chickballapura">Chickballapura</option>
+                    <option value="Chikkamagaluru">Chikkamagaluru</option>
+                    <option value="Dakshina Kannada">Dakshina Kannada</option>
+                    <option value="Hassan">Hassan</option>
+                    <option value="Kodagu">Kodagu</option>
+                    <option value="Mysuru City">Mysuru City</option>
+                    <option value="Tumakuru">Tumakuru</option>
+                    <option value="Uttara Kannada">Uttara Kannada</option>
+                    <option value="Chitradurga">Chitradurga</option>
+                    <option value="Shivamogga">Shivamogga</option>
+                    <option value="Kalaburagi">Kalaburagi</option>
+                    <option value="Bidar">Bidar</option>
+                    <option value="Vijayapur">Vijayapur</option>
+                    <option value="Kalaburagi City">Kalaburagi City</option>
+                    <option value="Mandya">Mandya</option>
+                    <option value="Mangaluru City">Mangaluru City</option>
+                    <option value="Raichur">Raichur</option>
+                    <option value="Udupi">Udupi</option>
+                    <option value="Vijayanagara">Vijayanagara</option>
+                    <option value="Belagavi City">Belagavi City</option>
+                    <option value="Mysuru Dist">Mysuru Dist</option>
+                    <option value="Yadgir">Yadgir</option>
+                    <option value="Ramanagara">Ramanagara</option>
+                    <option value="Kolar">Kolar</option>
+                    <option value="K.G.F">K.G.F</option>
+                    <option value="Davanagere">Davanagere</option>
+                    <option value="Karnataka Railways">Karnataka Railways</option>
+                    <option value="Coastal Security Police">Coastal Security Police</option>
+                    <option value="ISD Bengaluru">ISD Bengaluru</option>
+                </select>
+                <div class="time">
+                    <div class="month" style="width: 45%;">
+                        <label for="month">Month:</label>
+                        <br>
+                        <select id="month" name="Month" style="width: 100%;">
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="day" style="width: 50%;">
+                        <label for="day">Day of Week:</label>
+                        <br>
+                        <select id="day" name="DayOfWeek" style="width: 100%;">
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="crime">Crime Group:</label>
+                <select id="crime" name="CrimeGroup_Name">
+                    <option value="CRIMES RELATED TO CHILDREN">CRIMES RELATED TO CHILDREN</option>
+                    <option value="MURDER/HOMICIDES">MURDER/HOMICIDES</option>
+                   
+                </select>
+                <input type="submit" value="predict">
+            </form>
+            <div id="prediction-result"></div>
+        </div>
+      
+        <div id="map2">
+           
+
+        </div>
+
+
+        <div class="b2"></div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+        document.getElementById('crime-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const jsonObject = {};
+            formData.forEach(function (value, key) {
+                jsonObject[key] = value;
+            });
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonObject),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    let resultHtml = '<h2>Prediction Result:</h2>';
+                    pred=data[0]
+                    map2=data[1]
+                    
+                    pred.forEach(prediction => {
+                        resultHtml += `<p>${prediction['Village Area']}( ${Math.round(prediction['Probability']*100)}% probability )</p>`;
+                    });
+                    document.getElementById('prediction-result').innerHTML = resultHtml;
+                    document.getElementById('map2').innerHTML = map2;
+                    
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+</body>
+
+</html>

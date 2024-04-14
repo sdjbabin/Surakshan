@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folium Map</title>
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Specify the size of the map container */
+        .cont {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            /* Align items with space between */
+            align-items: center;
+            /* Vertically center items */
+        }
+
+        #map1 {
+            height: 700px;
+            width: 50%;
+
+            /* Adjust width as needed */
+        }
+        #map2 {
+            height: 700px;
+            width: 50%;
+
+            /* Adjust width as needed */
+        }
+
+        button {
+            width: 100px;
+            /* Adjust width as needed */
+            height: 50px;
+            border: none;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <!-- Display the map container -->
+        <div id="map1">
+
+            <!-- Include Leaflet and Folium JS -->
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            {{ map_html1 | safe }} <!-- Insert the map HTML here -->
+        </div>
+        <div id="map2">
+
+            <!-- Include Leaflet and Folium JS -->
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            {{ map_html2 | safe }} <!-- Insert the map HTML here -->
+        </div>
+    </div>
+</body>
+
+</html>
