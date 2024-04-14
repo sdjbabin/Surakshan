@@ -46,11 +46,22 @@ A thorough Crime Prediction Model is presented by Team Sherlocked to predict cri
 
 1. **Interactive Dashboard**
    - Criminal Dashboard
+     ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/e0bfabe6-43f7-446d-8b66-023c81b619a7)
+
    - Victim Dashboard
+     ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/8d8a6a58-5910-489e-9b4a-155a9260cae2)
+
    - Crime Dashboard
+     
    - Police Beat Dashboard
 
-2. **Crime Watch**: Animated Crime Hotspots Visualization 
+2. **Crime Watch**: Animated Crime Hotspots Visualization
+
+
+https://github.com/sdjbabin/Surakshan/assets/137878044/65f5ff11-c00d-4e1b-9179-91eb9b9cf78a
+
+
+
 
 3. **Predictive Analytics**
    - Accused-Victim Demographics
