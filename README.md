@@ -137,6 +137,11 @@ Define Systemic crime to be a district in which the crime clusters have not chan
 ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/2d02a5c6-f151-4f5f-8f36-e71b129e1f69)
 ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/3aa1ecaf-f14c-4510-8740-d12fadd070a9)
 
+## Chatbot
+
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/f05fa63b-26f5-499b-89fb-99c6811ae355)
+
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/518619f1-811f-499e-8faa-9610a819e984)
 
 ## Conclusion
 
@@ -147,11 +152,6 @@ The implementation of interactive dashboards, predictive analytics, and beat opt
 Moving forward, continued research and development in the field of crime prediction and analysis will be essential for addressing emerging challenges and evolving criminal behaviors. By leveraging advancements in artificial intelligence, data analytics, and spatial modeling, we can further enhance the effectiveness of law enforcement efforts and contribute to safer communities.
 
 
-##Chatbot
-
-![image](https://github.com/sdjbabin/Surakshan/assets/137878044/f05fa63b-26f5-499b-89fb-99c6811ae355)
-
-![image](https://github.com/sdjbabin/Surakshan/assets/137878044/518619f1-811f-499e-8faa-9610a819e984)
 
 
 ## Contact Us
