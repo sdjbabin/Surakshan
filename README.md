@@ -87,7 +87,8 @@ The Naïve Bayes algorithm is particularly well-suited for this task due to its 
 
 Our goal of using this model is to find all possible crime frequent patterns regardless of the committed crime type. Hence, we implemented the Apriori algorithm on location and time features and excluded the crime type feature. Additionally, to obtain more frequent patterns we applied constraint-based mining by restricting the extraction process on the frequent patterns having this formula of three specific item sets (Crime Type, Day,Time). Then we selected the optimum choice.
 For Karnataka, the minimum support value was 0.008, which corresponds to 277 absolute frequencies.
-![image](https://github.com/sdjbabin/Surakshan/assets/137878044/e4157ba7-9ad5-4af1-89e3-9123f70344a6)
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/917b890b-4bb9-4f4f-a4ce-10a830aecccc)
+
 
 
 ## DBSCAN Clustering
