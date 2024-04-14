@@ -1,4 +1,8 @@
-# Project Title
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/83b521b6-56a3-4c4a-a093-d347f3c5dade)![image](https://github.com/sdjbabin/Surakshan/assets/137878044/2280b7f8-2414-44b8-b9b8-e03f67ce576b)# Surakshan
+~ AI based solution to analyze 
+    & predict crimes in Karnataka
+
+
 
 A brief description of your project.
 
