@@ -15,6 +15,12 @@
 - [Conclusion](#conclusion)
 - [Contact Us](#contact-us)
 
+  ## View Our Website Demo
+
+You can view our website demo [here](https://example.com).
+
+## Running the website
+
 To install and run the project locally, follow these steps:
 
 1. Clone the repository to your local machine:
