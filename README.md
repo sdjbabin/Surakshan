@@ -1,6 +1,7 @@
 <img src="https://github.com/sdjbabin/Surakshan/assets/137878044/46a0a472-c34b-46cf-87e1-23da4c1dc6fd" alt="image" width="300" height="300" align="center">
 
-~ AI based model to analyze and predict crimes in Karnataka
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/56256247-7a1a-4489-9043-107ab8cf3b6a)
+
 
 ## Table of Contents
 
