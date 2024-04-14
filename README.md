@@ -15,9 +15,27 @@
 - [Conclusion](#conclusion)
 - [Contact Us](#contact-us)
 
-## Running the website
+To install and run the project locally, follow these steps:
 
-Provide instructions on how to run the website.
+1. Clone the repository to your local machine:
+   ```sh
+   git clone https://github.com/sdjbabin/Surakshan.git
+Navigate to the project directory:
+
+sh
+Copy code
+cd Surakshan
+Install the required dependencies:
+
+sh
+Copy code
+pip install -r requirements.txt
+Run the main application file:
+
+sh
+Copy code
+python app.py
+Once the server is running, open a web browser and go to http://localhost:5000 to view the website.
 
 ## Introduction
 
