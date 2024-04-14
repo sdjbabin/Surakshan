@@ -12,8 +12,10 @@
 - [Apriori Algorithm](#apriori-algorithm)
 - [DBSCAN Clustering](#dbscan-clustering)
 - [Deep Learning Model](#deep-learning-model)
+- [Chatbot](#chatbot)
 - [Conclusion](#conclusion)
 - [Contact Us](#contact-us)
+  
 
   ## View Our Website Demo
 
@@ -145,7 +147,11 @@ The implementation of interactive dashboards, predictive analytics, and beat opt
 Moving forward, continued research and development in the field of crime prediction and analysis will be essential for addressing emerging challenges and evolving criminal behaviors. By leveraging advancements in artificial intelligence, data analytics, and spatial modeling, we can further enhance the effectiveness of law enforcement efforts and contribute to safer communities.
 
 
+##Chatbot
 
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/f05fa63b-26f5-499b-89fb-99c6811ae355)
+
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/518619f1-811f-499e-8faa-9610a819e984)
 
 
 ## Contact Us
