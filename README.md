@@ -1,5 +1,6 @@
 ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/cb9c5572-096a-4598-a9df-9c4772c371c2)
 
+<img src="https://github.com/sdjbabin/Surakshan/assets/137878044/cb9c5572-096a-4598-a9df-9c4772c371c2" alt="image" width="300" height="300" align="center">
 
 
 ## Table of Contents
