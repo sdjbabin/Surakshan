@@ -63,6 +63,8 @@ A thorough Crime Prediction Model is presented by Team Sherlocked to predict cri
       ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/58084fb2-ab81-412e-8fb9-cafb9b34c76d)
 
    - Police Beat Dashboard
+     ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/df56f2a9-778e-4f0c-9a25-0c11982ffed2)
+
 
 2. **Crime Watch**: Animated Crime Hotspots Visualization
 
@@ -89,7 +91,7 @@ A thorough Crime Prediction Model is presented by Team Sherlocked to predict cri
 
 4. **Beat Optimization**
 
-   ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/945b9749-3c8c-4ba7-b745-ccab4d4272e9)
+  ![image](https://github.com/sdjbabin/Surakshan/assets/137878044/1d055723-9d9d-40c9-b310-5fb53be6e400)
 
 
     
