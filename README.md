@@ -87,7 +87,7 @@ The Naïve Bayes algorithm is particularly well-suited for this task due to its 
 
 Our goal of using this model is to find all possible crime frequent patterns regardless of the committed crime type. Hence, we implemented the Apriori algorithm on location and time features and excluded the crime type feature. Additionally, to obtain more frequent patterns we applied constraint-based mining by restricting the extraction process on the frequent patterns having this formula of three specific item sets (Crime Type, Day,Time). Then we selected the optimum choice.
 For Karnataka, the minimum support value was 0.008, which corresponds to 277 absolute frequencies.
-![image](https://github.com/sdjbabin/Surakshan/assets/137878044/917b890b-4bb9-4f4f-a4ce-10a830aecccc)
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/54e70f23-6530-41c7-aa9d-b91cb10850e5)
 
 
 
@@ -97,15 +97,17 @@ Clustering of crimes within each of 40 districts was performed for the time peri
 
 Define Systemic crime to be a district in which the crime clusters have not changed in geography over time.
 
-![image](https://github.com/sdjbabin/Surakshan/assets/137878044/7eac6f10-790c-4bcc-98bc-80bcdc3fc538)
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/6b2963b0-0371-448c-9497-d5b441d9e416)
 
 ## Deep Learning Model
 
-Discuss the deep learning model used in the project.
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/e3751421-a8ad-4ca4-b534-49623f127a6b)
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/2d02a5c6-f151-4f5f-8f36-e71b129e1f69)
+![image](https://github.com/sdjbabin/Surakshan/assets/137878044/3aa1ecaf-f14c-4510-8740-d12fadd070a9)
+
 
 ## Conclusion
 
-Summarize the project and its findings.
 
 ## Contact Us
 
