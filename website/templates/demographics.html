@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Surakshan</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+   <!-- Favicons -->
+   <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+   <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+   
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+   
+   <!-- Vendor CSS Files -->
+   <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+   
+   <!-- Template Main CSS File -->
+   <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+    <style>
+        a {
+            color: #ffc451;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffd584;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        /*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+        .back-to-top {
+            position: fixed;
+            visibility: hidden;
+            opacity: 0;
+            right: 15px;
+            bottom: 15px;
+            z-index: 996;
+            background: #ffc451;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            transition: all 0.4s;
+        }
+
+        .back-to-top i {
+            font-size: 28px;
+            color: #151515;
+            line-height: 0;
+        }
+
+        .back-to-top:hover {
+            background: #151515;
+        }
+
+        .back-to-top:hover i {
+            color: #ffc451;
+        }
+
+        .back-to-top.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            overflow: hidden;
+            background: #151515;
+        }
+
+        #preloader:before {
+            content: "";
+            position: fixed;
+            top: calc(50% - 0px);
+            left: calc(50% - 30px);
+            border: 6px solid #ffc451;
+            border-top-color: #151515;
+            border-bottom-color: #151515;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: animate-preloader 1s linear infinite;
+        }
+
+        @keyframes animate-preloader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+        @media screen and (max-width: 768px) {
+            [data-aos-delay] {
+                transition-delay: 0 !important;
+            }
+        }
+
+        .cont {
+            width: 100%;
+            display: flex;
+            padding: 50px;
+            background-color: black;
+            margin-top: 3%;
+            padding-bottom: 0;
+        }
+
+
+
+       
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: black;
+
+            width: 100%;
+        }
+
+        .card1 {
+            background-color: rgb(2, 2, 2, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 60%;
+            padding: 20px;
+            color: #f5eded;
+            z-index: 9999;
+            margin-top: 2%;
+
+        }
+
+        .card1 h1 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin-bottom: 20px;
+            font-weight: bold;
+
+        }
+
+        .card1 form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .card1 form label {
+            margin-bottom: 8px;
+            color: wheat;
+        }
+
+        .card1 form select,
+        .card1 form input[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #dfe6e9;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #2d3436;
+        }
+
+        .card1 form input[type="submit"] {
+            background-color: #2980b9;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card1 form input[type="submit"]:hover {
+            background-color: #2c3e50;
+        }
+
+        #pred1,
+        #pred2 {
+            margin-top: 20px;
+            background-color: rgba(71, 71, 71, 0.3);
+            /* Translucent black background */
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            border: 0.5px solid;
+            /* Set border width and style */
+            border-color: rgb(249, 249, 249);
+            border-radius: 10px;
+            filter: brightness(70%);
+        ;
+
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
+            width: 100%;
+        }
+
+        #pred1 h2,
+        #pred2 h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        #pred1 p,
+        #pred2 p {
+            margin-bottom: 10px;
+        }
+
+        .time {
+            display: flex;
+
+        }
+
+        #prediction-result {
+            width: 65%;
+            margin-left: 5%;
+            margin-top: 5%;
+            z-index: 11;
+        }
+
+        .day {
+            margin-left: 5%;
+        }
+
+
+        .b1 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg, rgb(67, 4, 4), rgb(94, 3, 3));
+            filter: blur(80px);
+
+        }
+
+        .b2 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg, rgb(67, 4, 4), rgb(94, 3, 3));
+            filter: blur(80px);
+            top: 450px;
+            z-index: 0;
+        }
+
+        .b3 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg, rgb(67, 4, 4), rgb(94, 3, 3));
+            filter: blur(80px);
+            left: 1250px
+        }
+
+        /* navbar */
+        #header {
+            transition: all 0.5s;
+            z-index: 997;
+            padding: 15px 0;
+        }
+
+        #header.header-scrolled,
+        #header.header-inner-pages {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        #header .logo {
+            font-size: 32px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        #header .logo a {
+            color: #fff;
+        }
+
+        #header .logo a span {
+            color: #ffc451;
+        }
+
+        #header .logo img {
+            width: 250px;
+            height: 100px;
+        }
+
+        /*--------------------------------------------------------------
+#  Get Startet Button
+--------------------------------------------------------------*/
+        .get-started-btn {
+            color: #fff;
+            border-radius: 4px;
+            padding: 7px 25px 8px 25px;
+            white-space: nowrap;
+            transition: 0.3s;
+            font-size: 14px;
+            display: inline-block;
+            border: 2px solid #ffc451;
+        }
+
+        .get-started-btn:hover {
+            background: #ffbb38;
+            color: #343a40;
+        }
+
+        @media (max-width: 992px) {
+            .get-started-btn {
+                padding: 7px 20px 8px 20px;
+                margin-right: 15px;
+            }
+        }
+
+        /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+        /**
+* Desktop Navigation 
+*/.spinner{
+  height: 120px;
+  width: 120px;
+  border: 6px solid;
+  border-color: white transparent white transparent;
+  border-radius: 50%;
+  animation: spin 1.3s linear infinite;
+  
+  margin-left: 40%;
+  margin-top: 15%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+        
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-lg-between">
+
+            <h1 class="logo me-auto me-lg-0"><a href="#">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" width="50px"
+                  style="margin-left: -30%;margin-right: -100%;">
+              </a>
+            </h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      
+            <nav id="navbar" class="navbar order-last order-lg-0">
+              <ul>
+                <li><a class="nav-link scrollto " href="{{ url_for('index') }}">Home</a></li>
+                <li><a class="nav-link scrollto" href="{{ url_for('criminal') }}">Criminal Dashboard</a></li>
+                <li><a class="nav-link scrollto" href="{{ url_for('victim') }}">Victim Visualization Tool</a></li>
+                <li><a class="nav-link scrollto " href="{{ url_for('crimewatch') }}">Crime Watch</a></li>
+                <li >
+                  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Predictive Analytics
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                    style="background-color: rgba(52, 45, 45, 0.5);color: white;width: 100%;">
+                    <a class="dropdown-item" href="{{ url_for('demographics') }}" style="padding-left: 2%;">Criminal
+                      Demographics</a>
+                    <a class="dropdown-item" href="{{ url_for('crimetime') }}" style="padding-left: 2%;">Crime Time</a>
+                    <a class="dropdown-item" href="" style="padding-left: 2%; ">Crime Hotspots</a>
+                    <a class="dropdown-item" href="{{ url_for('crimetype') }}" style="padding-left: 2%;">Crime Type</a>
+                    <!-- <a class="dropdown-item" href="#"></a> -->
+                  </div>
+                </li>
+      
+                <li><a class="nav-link scrollto" href="{{ url_for('beatpred') }}">Beat Management</a></li>
+            </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+      
+      
+      
+          </div>
+    </header><!-- End Header -->
+
+    <div class="cont">
+        <div class="b1"></div>
+        <div class="b3"></div>
+        <div class="card1">
+            <h1>Accused-Victim Prediction</h1>
+            <form id="crime-form">
+                <label for="area">Area:</label>
+                <select id="area" name="Area">
+                    <option value="Bagalkot">Bagalkot</option>
+                    <option value="Koppal">Koppal</option>
+                    <option value="Dharwad">Dharwad</option>
+                    <option value="Gadag">Gadag</option>
+                    <option value="Haveri">Haveri</option>
+                    <option value="Hubballi Dharwad City">Hubballi Dharwad City</option>
+                    <option value="Ballari">Ballari</option>
+                    <option value="Belagavi Dist">Belagavi Dist</option>
+                    <option value="Bengaluru City">Bengaluru City</option>
+                    <option value="Bengaluru Dist">Bengaluru Dist</option>
+                    <option value="Chamarajanagar">Chamarajanagar</option>
+                    <option value="Chickballapura">Chickballapura</option>
+                    <option value="Chikkamagaluru">Chikkamagaluru</option>
+                    <option value="Dakshina Kannada">Dakshina Kannada</option>
+                    <option value="Hassan">Hassan</option>
+                    <option value="Kodagu">Kodagu</option>
+                    <option value="Mysuru City">Mysuru City</option>
+                    <option value="Tumakuru">Tumakuru</option>
+                    <option value="Uttara Kannada">Uttara Kannada</option>
+                    <option value="Chitradurga">Chitradurga</option>
+                    <option value="Shivamogga">Shivamogga</option>
+                    <option value="Kalaburagi">Kalaburagi</option>
+                    <option value="Bidar">Bidar</option>
+                    <option value="Vijayapur">Vijayapur</option>
+                    <option value="Kalaburagi City">Kalaburagi City</option>
+                    <option value="Mandya">Mandya</option>
+                    <option value="Mangaluru City">Mangaluru City</option>
+                    <option value="Raichur">Raichur</option>
+                    <option value="Udupi">Udupi</option>
+                    <option value="Vijayanagara">Vijayanagara</option>
+                    <option value="Belagavi City">Belagavi City</option>
+                    <option value="Mysuru Dist">Mysuru Dist</option>
+                    <option value="Yadgir">Yadgir</option>
+                    <option value="Ramanagara">Ramanagara</option>
+                    <option value="Kolar">Kolar</option>
+                    <option value="K.G.F">K.G.F</option>
+                    <option value="Davanagere">Davanagere</option>
+                    <option value="Karnataka Railways">Karnataka Railways</option>
+                    <option value="Coastal Security Police">Coastal Security Police</option>
+                    <option value="ISD Bengaluru">ISD Bengaluru</option>
+                </select>
+                <label for="village">Village Name:</label>
+
+                <select id="village" name="Village_Area_Name">
+                    <option value="MADAPUR">MADAPUR</option>
+                    <option value="AIHOLE">AIHOLE</option>
+                    <option value="DAMMUR">DAMMUR</option>
+                    <option value="AMINAGAD">AMINAGAD</option>
+                    <option value="SULEBAVI">SULEBAVI</option>
+                    <option value="KAMATAGI">KAMATAGI</option>
+                    <option value="UPANAL">UPANAL</option>
+                    <option value="GUDUR">GUDUR</option>
+                    <option value="KYADIGERI">KYADIGERI</option>
+                    <option value="MURUDI">MURUDI</option>
+                    <option value="RAMATHAL">RAMATHAL</option>
+                    <option value="KALLIGUDDA">KALLIGUDDA</option>
+                    <option value="KELUR">KELUR</option>
+                    <option value="RAKKASAGI">RAKKASAGI</option>
+                    <option value="BENAL">BENAL</option>
+                    <option value="SULEBHAVI TWO">SULEBHAVI TWO</option>
+                    <option value="KAMATAGI ONE">KAMATAGI ONE</option>
+                    <option value="CHIKKAMAGI">CHIKKAMAGI</option>
+                    <option value="AMBLIKOPPA">AMBLIKOPPA</option>
+                    <option value="BENAKANAWARI">BENAKANAWARI</option>
+                    <option value="YARAGOPPA">YARAGOPPA</option>
+                    <option value="KULAGERI">KULAGERI</option>
+                    <option value="TALAWAR GALLI">TALAWAR GALLI</option>
+                    <option value="LAKHAMAPUR">LAKHAMAPUR</option>
+                    <option value="KAKANUR">KAKANUR</option>
+                    <option value="ADAGAL">ADAGAL</option>
+                    <option value="ANAND NAGAR">ANAND NAGAR</option>
+                    <option value="CHALUKYANAGAR">CHALUKYANAGAR</option>
+                    <option value="RANGANATH NAGAR">RANGANATH NAGAR</option>
+                    <option value="NAVILOHOLE">NAVILOHOLE</option>
+                    <option value="HIRENASIBI">HIRENASIBI</option>
+                    <option value="NEERALAGI">NEERALAGI</option>
+                    <option value="NAVANAGAR PS LIMITS">NAVANAGAR PS LIMITS</option>
+                    <option value="GULEDAGUDDA PS LIMITS">GULEDAGUDDA PS LIMITS</option>
+                    <option value="BANAHATTI TWON">BANAHATTI TWON</option>
+                    <option value="BAGALKOT TOWN LIMITS">BAGALKOT TOWN LIMITS</option>
+                    <option value="AMINAGAD PS LIMITS">AMINAGAD PS LIMITS</option>
+                    <option value="VEERAPUR">VEERAPUR</option>
+                    <option value="BOMMANAGI">BOMMANAGI</option>
+                    <option value="BHAGAVATI">BHAGAVATI</option>
+                    <option value="ANDAMURANAL">ANDAMURANAL</option>
+                    <option value="SHIRUR">SHIRUR</option>
+                    <option value="RAMPUR RC">RAMPUR RC</option>
+                    <option value="BODANAYAKANADINNI">BODANAYAKANADINNI</option>
+                    <option value="SHIGIKERI">SHIGIKERI</option>
+                    <option value="SANGONDI">SANGONDI</option>
+                    <option value="BILKERUR">BILKERUR</option>
+                    <option value="ARAVIND LIMBAVALI HOUSE">ARAVIND LIMBAVALI HOUSE</option>
+                    <option value="HARANASHIKARI KALANI">HARANASHIKARI KALANI</option>
+                    <option value="VENKATAPET">VENKATAPET</option>
+                    <option value="KOULPET">KOULPET</option>
+                    <option value="LAXMI NAGARA">LAXMI NAGARA</option>
+                    <option value="BASAVESHWAR COLLEGE">BASAVESHWAR COLLEGE</option>
+                    <option value="JAYANAGARA">JAYANAGARA</option>
+                    <option value="ASLAMBABA ADDA">ASLAMBABA ADDA</option>
+                    <option value="BAGALKOT KALADAGI RAOD">BAGALKOT KALADAGI RAOD</option>
+                    <option value="NAVANAGAR">NAVANAGAR</option>
+                    <option value="SHIROL">SHIROL</option>
+                    <option value="BUDIHAL">BUDIHAL</option>
+                    <option value="JADRAMAKUNTI">JADRAMAKUNTI</option>
+                    <option value="KARADIGUDD">KARADIGUDD</option>
+                    <option value="OLD BAGALKOT">OLD BAGALKOT</option>
+                    <option value="GULEDAGUDDA">GULEDAGUDDA</option>
+                    <option value="JAMAKANDI">JAMAKANDI</option>
+                    <option value="HUNUGUND">HUNUGUND</option>
+                    <option value="MURNAL R C">MURNAL R C</option>
+                    <option value="TALLIKARI">TALLIKARI</option>
+                    <option value="KONNUR">KONNUR</option>
+                    <option value="HOSUR VILLAGE">HOSUR VILLAGE</option>
+                    <option value="ASKI ASANGI VILLAGE">ASKI ASANGI VILLAGE</option>
+                    <option value="CHIMMAD VILLAGE">CHIMMAD VILLAGE</option>
+                    <option value="RAMPUR">RAMPUR</option>
+                    <option value="JAGADAL VILLAGE">JAGADAL VILLAGE</option>
+                    <option value="K H D C COLONY">K H D C COLONY</option>
+                    <option value="LAXMI NAGAR BANAHATTI">LAXMI NAGAR BANAHATTI</option>
+                    <option value="PENDARI GALLI">PENDARI GALLI</option>
+                    <option value="HIPPARAGI VILLAGE">HIPPARAGI VILLAGE</option>
+                    <option value="TOLAMATTI">TOLAMATTI</option>
+                    <option value="BALLUR">BALLUR</option>
+                    <option value="GULABAL">GULABAL</option>
+                    <option value="ANAGAWADI">ANAGAWADI</option>
+                    <option value="GALAGALI">GALAGALI</option>
+                    <option value="GANDI NAGAR">GANDI NAGAR</option>
+                    <option value="BADAGANDI">BADAGANDI</option>
+                    <option value="JANAMATTI">JANAMATTI</option>
+                    <option value="BASAVESHWAR NAGAR">BASAVESHWAR NAGAR</option>
+                    <option value="KERE KHANAPUR">KERE KHANAPUR</option>
+                    <option value="LINGAPUR">LINGAPUR</option>
+                    <option value="HOSA PETE">HOSA PETE</option>
+                    <option value="KOTNALLI">KOTNALLI</option>
+                    <option value="NEGLI PETE">NEGLI PETE</option>
+                    <option value="SHAHAPUR">SHAHAPUR</option>
+                    <option value="BEVINAMATTI">BEVINAMATTI</option>
+                    <option value="AMARAVTI">AMARAVTI</option>
+                    <option value="KENGAL">KENGAL</option>
+                    <option value="CHOUDAKAMALADINNI">CHOUDAKAMALADINNI</option>
+                    <option value="BELGAL">BELGAL</option>
+                    <option value="TIMMAPUR">TIMMAPUR</option>
+                    <option value="NAGUR">NAGUR</option>
+                    <option value="HUVANUR">HUVANUR</option>
+                    <option value="KOUJAGANUR">KOUJAGANUR</option>
+                    <option value="MAHANT NAGAR">MAHANT NAGAR</option>
+                    <option value="MANNAPUR STREET">MANNAPUR STREET</option>
+                    <option value="KUDALASANGAM COLONY">KUDALASANGAM COLONY</option>
+                    <option value="KANAKANAGAR ILKAL">KANAKANAGAR ILKAL</option>
+                    <option value="KULAKARNIPETH HOSAPETH GALLI">KULAKARNIPETH HOSAPETH GALLI</option>
+                    <option value="INGALAGI">INGALAGI</option>
+                    <option value="BANNIKATTI ILKAL">BANNIKATTI ILKAL</option>
+                    <option value="BALAKUNDI">BALAKUNDI</option>
+                    <option value="HANAMANAL">HANAMANAL</option>
+                    <option value="NANDAWADAGI">NANDAWADAGI</option>
+                    <option value="KARADI">KARADI</option>
+                    <option value="GADISUNKAPUR">GADISUNKAPUR</option>
+                    <option value="HIREKODAGALI">HIREKODAGALI</option>
+                    <option value="PALATI">PALATI</option>
+                    <option value="TARIWAL">TARIWAL</option>
+                    <option value="HERUR">HERUR</option>
+                    <option value="HARINAPUR">HARINAPUR</option>
+                    <option value="KALLALLI">KALLALLI</option>
+                    <option value="SIDDAPUR">SIDDAPUR</option>
+                    <option value="SANAL">SANAL</option>
+                    <option value="KUMBARHALL">KUMBARHALL</option>
+                    <option value="HUNASHIKATTI">HUNASHIKATTI</option>
+                    <option value="MUTTUR">MUTTUR</option>
+                    <option value="KUNCHANUR">KUNCHANUR</option>
+                    <option value="CHINAGUNDI">CHINAGUNDI</option>
+                    <option value="BIJAPUR ROAD">BIJAPUR ROAD</option>
+                    <option value="PRABATH NAGAR">PRABATH NAGAR</option>
+                    <option value="P B SCHOOL GALLI">P B SCHOOL GALLI</option>
+                    <option value="CHOUDAYA NAGAR">CHOUDAYA NAGAR</option>
+                    <option value="SADANANDA COLONY">SADANANDA COLONY</option>
+                    <option value="TULASIGERI">TULASIGERI</option>
+                    <option value="SIMIKERI">SIMIKERI</option>
+                    <option value="KALADAGI">KALADAGI</option>
+                    <option value="GOVINDAKOPPA">GOVINDAKOPPA</option>
+                    <option value="ANKALAGI">ANKALAGI</option>
+                    <option value="SARKARI HANAMANERI">SARKARI HANAMANERI</option>
+                    <option value="SULIKERI">SULIKERI</option>
+                    <option value="NARENUR">NARENUR</option>
+                    <option value="MATTIKATTI">MATTIKATTI</option>
+                    <option value="SAMAGAR GALLI">SAMAGAR GALLI</option>
+                    <option value="KADARAKOPPA">KADARAKOPPA</option>
+                    <option value="ANAVAL">ANAVAL</option>
+                    <option value="KHAJI GALLI">KHAJI GALLI</option>
+                    <option value="BAVIKATTI GALLI">BAVIKATTI GALLI</option>
+                    <option value="NEHARU NAGAR">NEHARU NAGAR</option>
+                    <option value="CHOUDAPUR">CHOUDAPUR</option>
+                    <option value="LOKAPUR">LOKAPUR</option>
+                    <option value="BOMMANABUDNI">BOMMANABUDNI</option>
+                    <option value="NAGANAPUR">NAGANAPUR</option>
+                    <option value="SUBHAS NAGAR LAKSHANATTI">SUBHAS NAGAR LAKSHANATTI</option>
+                    <option value="ARALIKATTI">ARALIKATTI</option>
+                    <option value="BUDNI P.D">BUDNI P.D</option>
+                    <option value="SANGANATTI">SANGANATTI</option>
+                    <option value="SAIDAPUR SAMIRAWADI">SAIDAPUR SAMIRAWADI</option>
+                    <option value="DUTCH COLONY">DUTCH COLONY</option>
+                    <option value="NANDAGAV">NANDAGAV</option>
+                    <option value="KESARAKOPPA">KESARAKOPPA</option>
+                    <option value="TOWN BEAT">TOWN BEAT</option>
+                    <option value="OTHER PS LIMITS">OTHER PS LIMITS</option>
+                    <option value="JANATHA PLOT">JANATHA PLOT</option>
+                    <option value="BUDNI PM">BUDNI PM</option>
+                    <option value="WADDAR GALLI">WADDAR GALLI</option>
+                    <option value="RAMPUR GALLI">RAMPUR GALLI</option>
+                    <option value="MALLAMA NAGAR">MALLAMA NAGAR</option>
+                    <option value="BARAGI">BARAGI</option>
+                    <option value="UTTUR">UTTUR</option>
+                    <option value="HOUSING COLONY">HOUSING COLONY</option>
+                    <option value="APMC YARD">APMC YARD</option>
+                    <option value="BELAGALI">BELAGALI</option>
+                    <option value="VIDYAGIRI">VIDYAGIRI</option>
+                    <option value="INDUSTRIAL AREA NAVANAGAR">INDUSTRIAL AREA NAVANAGAR</option>
+                    <option value="KURAGOD">KURAGOD</option>
+                    <option value="TUNGAL">TUNGAL</option>
+                    <option value="JANATA">JANATA</option>
+                    <option value="CHIKKALAKI">CHIKKALAKI</option>
+                    <option value="TUBACHI">TUBACHI</option>
+                    <option value="TERDAL">TERDAL</option>
+                    <option value="RABAKAVI">RABAKAVI</option>
+                    <option value="SASALATTI">SASALATTI</option>
+                    <option value="DEVARAJ NAGAR">DEVARAJ NAGAR</option>
+                    <option value="TAMADADDI VILLAGE">TAMADADDI VILLAGE</option>
+                    <option value="HANAGANDI VILLAGE">HANAGANDI VILLAGE</option>
+                </select>
+                
+                <div class="time">
+                    <div class="month" style="width: 45%;">
+                        <label for="month">Month:</label>
+                        <br>
+                        <select id="month" name="Month" style="width: 100%;">
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="day" style="width: 50%;">
+                        <label for="day">Day of Week:</label>
+                        <br>
+                        <select id="day" name="DayOfWeek" style="width: 100%;">
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="crime">Crime Group:</label>
+                <select id="crime" name="CrimeGroup_Name">
+                    <option value="CRIMES RELATED TO CHILDREN">CRIMES RELATED TO CHILDREN</option>
+                    <option value="MURDER/HOMICIDES">MURDER/HOMICIDES</option>
+
+                    <option value="COMMUNAL/PUBLIC RIOTS">COMMUNAL/PUBLIC RIOTS</option>
+                    <option value="DEATHS DUE TO RASHNESS/NEGLIGENCE">DEATHS DUE TO RASHNESS/NEGLIGENCE</option>
+                    <option value="CRIMES RELATED TO WOMEN">CRIMES RELATED TO WOMEN</option>
+                    <option value="SEXUAL CRIMES">SEXUAL CRIMES</option>
+                    <option value="CASES OF HURT">CASES OF HURT</option>
+                    <option value="CRIMES RELATED TO MARRIAGE">CRIMES RELATED TO MARRIAGE</option>
+                    <option value="BURGLARY - NIGHT">BURGLARY - NIGHT</option>
+                    <option value="BURGLARY - DAY">BURGLARY - DAY</option>
+                    <option value="KIDNAPPING AND ABDUCTION">KIDNAPPING AND ABDUCTION</option>
+                    <option value="THEFT">THEFT</option>
+                    <option value="CYBER CRIME">CYBER CRIME</option>
+                    <option value="Counterfeiting">Counterfeiting</option>
+                    <option value="CRIMINAL TRESPASS">CRIMINAL TRESPASS</option>
+                    <option value="CRIMINAL INTIMIDATION">CRIMINAL INTIMIDATION</option>
+                    <option value="ROBBERY">ROBBERY</option>
+                    <option value="DACOITY">DACOITY</option>
+                    <option value="ARSON">ARSON</option>
+                    <option value="DRUGS">DRUGS</option>
+                    <option value="CRIMES RELATED TO TR">CRIMES RELATED TO TRAFFICKING</option>
+                </select>
+                <input type="submit" value="predict">
+            </form>
+
+        </div>
+        <div id="prediction-result">
+            <!-- <div id="pred1"></div>
+            <div id="pred2"></div> -->
+            
+        </div>
+
+
+        <div class="b2"></div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+        document.getElementById('crime-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+           
+            document.getElementById('prediction-result').innerHTML=''
+            const spin = document.createElement("div");
+            spin.className='spinner'
+            spin.style.display='block'
+            document.getElementById('prediction-result').appendChild(spin)
+            let topics = ['Caste', 'Profession', 'Sex', 'Caste', 'Profession', 'Sex']
+            const formData = new FormData(this);
+            const jsonObject = {};
+            formData.forEach(function (value, key) {
+                jsonObject[key] = value;
+            });
+            fetch('/predict1', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonObject),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const div1 = document.createElement("div");
+
+                    // Add a class name to the div
+                    div1.id = "pred1";
+                    const div2 = document.createElement("div");
+
+                    // Add a class name to the div
+                    div2.id = "pred2";
+                    let resultHtml1 = '<h2>Accussed Background Prediction Result:</h2><div class="box">';
+                    let resultHtml2 = '<h2>Victim Background Prediction Result:</h2><div class="box">';
+                    let i = 0;
+                    data.forEach(prediction => {
+                        if (i < 3) {
+                            resultHtml1 += `<div><h3>${topics[i]}</h3>`;
+                            prediction.forEach(pred => {
+                                resultHtml1 += `<p>${pred['classes']} ( ${Math.round(pred['Probability'] * 100)}% probability )</p>`;
+                            })
+                            resultHtml1 += `</div>`
+                            if (i == 2) {
+                                resultHtml1 += `</div>`
+                            }
+                        }
+                        if (i >= 3) {
+                            resultHtml2 += `<div><h3>${topics[i]}</h3>`;
+                            prediction.forEach(pred => {
+                                resultHtml2 += `<p>${pred['classes']} ( ${Math.round(pred['Probability'] * 100)}% probability )</p>`;
+                            })
+                            resultHtml2 += `</div>`
+                            if (i == 5) {
+                                resultHtml2 += `</div>`
+                            }
+                        }
+                        i = i + 1
+                    });
+                    div1.innerHTML = resultHtml1;
+                    div2.innerHTML = resultHtml2;
+                    
+                    spin.style.display='none'
+                 
+                    document.getElementById('prediction-result').appendChild(div1)
+                    document.getElementById('prediction-result').appendChild(div2)
+
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+    <script>
+        document.getElementById('area').addEventListener('change', function () {
+            var selectedOption = this.value;
+
+
+            // Send selected option to Flask route using AJAX
+            fetch('/process_option', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ selectedOption: selectedOption , num:0}),
+            })
+                .then(response => response.json())
+                .then(data => {
+
+                    l = data['items2']
+                    selectElement = document.getElementById('village')
+                    selectElement.innerHTML = ''
+                    l.forEach(function (option) {
+                        var optionElement = document.createElement('option');
+                        optionElement.value = option;  // Set the value attribute
+                        optionElement.textContent = option;  // Set the text content
+                        selectElement.appendChild(optionElement);  // Append the option to the select element
+                    });
+
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+
+    </script>
+     <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+     <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+     <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+     <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+     <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+     <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+     <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+ 
+     <!-- Template Main JS File -->
+     <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>

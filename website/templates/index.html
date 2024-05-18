@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Surakshan</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<style></style>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="#">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" width="50px"
+            style="margin-left: -30%;margin-right: -100%;">
+        </a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{{ url_for('index') }}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('criminal') }}">Criminal Dashboard</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('victim') }}">Victim Visualization Tool</a></li>
+          <li><a class="nav-link scrollto " href="{{ url_for('crimewatch') }}">Crime Watch</a></li>
+          <li>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Predictive Analytics
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+              style="background-color: rgba(52, 45, 45, 0.5);color: white;width: 100%; z-index: 9999;">
+              <a class="dropdown-item" href="{{ url_for('demographics') }}" style="padding-left: 2%;">Criminal
+                Demographics</a>
+              <a class="dropdown-item" href="{{ url_for('crimetime') }}" style="padding-left: 2%;">Crime Time</a>
+              <a class="dropdown-item" href='' style="padding-left: 2%;">Crime Hotspots</a>
+              <a class="dropdown-item" href="{{ url_for('crimetype') }}" style="padding-left: 2%;">Crime Type</a>
+              <!-- <a class="dropdown-item" href="#"></a> -->
+            </div>
+          </li>
+
+          <li><a class="nav-link scrollto" href="{{ url_for('beatpred') }}">Beat Management</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+      <img src="{{ url_for('static', filename='images/logo.png') }}">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+
+        <div class="col-xl-6 col-lg-8">
+          <h1>Stay Ahead,Stay Safe<span>.</span></h1>
+          <h2>Predicting Crime for a Safer Tomorrow</h2>
+        </div>
+      </div>
+
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+
+            <h3><a href="">DETECT</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+
+            <h3><a href="">INFORM</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+
+            <h3><a href="">PREVENT</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+
+            <h3><a href="">EMPOWER</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+
+            <h3><a href="">Secure</a></h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="b1"></div>
+      <!-- <div class="b2"></div> -->
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{{ url_for('static', filename='assets/img/about.jpg') }}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3 style="color:white">Securing Tomorrow: Introducing Our Crime Prediction App: Surakshan</h3>
+            <br>
+            <p class="fst-italic" style="color:white">
+              By analyzing historical crime data, patterns, and trends, the app can provide insights into areas with
+              higher risks of criminal incidents. It leverages predictive modeling algorithms to forecast when and where
+              certain types of crimes are likely to occur. Police can access this information to make informed decisions
+              about safety measures and resource allocation. Additionally, the app may offer features such as real-time
+              alerts, safety tips, and community engagement tools to empower users and foster collaboration in crime
+              prevention efforts. Overall, the crime prediction app serves as a proactive tool in enhancing public
+              safety and security.
+            </p>
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="b3"></div>
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <img class="image col-lg-6" src="{{ url_for('static', filename='assets/img/features.jpg') }}"
+            data-aos="fade-right">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                <i class="bx bx-receipt"></i>
+                <h4 style="color:white">Criminal Profiling</h4>
+                <p>Provides criminal records, predicts future crime
+                  locations, and analyses patterns.</p>
+              </div>
+              <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+                <i class="bx bx-cube-alt"></i>
+                <h4 style="color:white">City Crime Analysis & Hotspot Prediction:</h4>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+              </div>
+              <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+                <i class="bx bx-images"></i>
+                <h4 style="color:white">Dashboard</h4>
+                <p>User-friendly interface for analytics and deployment
+                  recommendation</p>
+              </div>
+              <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+                <i class="bx bx-shield"></i>
+                <h4 style="color:white">Resource Optimization:</h4>
+                <p>Optimizes resource allocation and strategic
+                  deployment of personnel.</p>
+              </div>
+        </div>
+        
+        </div>
+      </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+
+      <div class="container" style='position: relative'>
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p style="color:white">Check our Services</p>
+        </div>
+        <div class="b3"></div>
+        <div class="b1"></div>
+        <div class="row">
+
+          <div class="icon-box" style="color:white">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <h4><a href="" style="color:white">Crimes Dashboard</a></h4>
+            <p>Offers comprehensive visualizations combining maps with charts and graphs to
+              present crime data dynamically. Explore crime incidents geospatially, zooming in on specific areas and
+              viewing detailed information with just a click. </p>
+          </div>
+
+
+
+          <div class="icon-box" style="color:white">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4><a href="" style="color:white">Victim and Accused data visualization tool.</a></h4>
+            <p>Our criminal and victim analysis platform offers users a robust suite of visual tools to explore crime
+              patterns, delve into the socioeconomic backgrounds of both criminals and victims, and uncover
+              correlations between them. </p>
+          </div>
+
+
+
+          <div class="icon-box" style="color:white">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4><a href="" style="color:white">Crime Watch</a></h4>
+            <p>Employs advanced algorithms to pinpoint areas with heightened crime rates. Integrated with navigation
+              features, it assists users by providing the shortest paths from their current locations to these
+              identified hotspots, enhancing safety awareness and travel planning.</p>
+          </div>
+
+
+
+          <div class="icon-box" style="color:white">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4><a href="" style="color:white">Predictive Analytics</a></h4>
+            <p>Analyzes victim and accused demographic data, including caste, profession, and gender, to anticipate
+              the severity of a crime. By assessing these factors, it categorizes crimes into heinous and non-heinous,
+              aiding law enforcement in prioritizing investigations and resource allocation.</p>
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Call To Action</h3>
+          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+          <a class="cta-btn" href="#">Call To Action</a>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+
+
+    </div>
+    <div class="swiper-pagination"></div>
+    </div>
+
+    </div>
+
+
+
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
