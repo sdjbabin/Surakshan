@@ -40,9 +40,10 @@ To install and run the project locally, follow these steps:
    pip install -r requirements.txt
 
 4. Download the datasets from the drive link and save it to the to main folder where the model.py is present
+   [View the datasets](https://drive.google.com/drive/u/1/folders/1WZnXpP1B8oKfjV-uN9HjthmQeSNQUMVN)
 
 
-5. Finally, open run the model.py file
+6. Finally, open run the model.py file
    ```sh
    python model.py
 
