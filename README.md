@@ -39,11 +39,12 @@ To install and run the project locally, follow these steps:
    ```sh
    pip install -r requirements.txt
 
-4. Go to every folder and run the model.py files using the command
+4. Download the datasets from the drive link and save it to the to main folder where the model.py is present
+
+
+5. Finally, open run the model.py file
    ```sh
    python model.py
-
-5. Finally, open [index.html](index.html) in the `website` folder.
 
 ## Introduction
 
