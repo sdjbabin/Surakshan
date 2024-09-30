@@ -1,6 +1,6 @@
-
+<div align="center">
 <img src="https://github.com/sdjbabin/Surakshan/assets/137878044/cb9c5572-096a-4598-a9df-9c4772c371c2" alt="image" width="600" height="300" align="center">
-
+</div>
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@
 
   ## View Our Website Demo
 
-You can view our website demo [here](https://example.com).
+You can view our website demo [here](https://surakshan.onrender.com/).
 
 ## Running the website
 
@@ -149,11 +149,11 @@ Define Systemic crime to be a district in which the crime clusters have not chan
 
 ## Conclusion
 
-In conclusion, the development of an AI-based model for analyzing and predicting crimes in Karnataka holds significant promise for enhancing public safety and law enforcement strategies. By leveraging machine learning algorithms, such as Naïve Bayes, Apriori, DBSCAN clustering, and deep learning models, we have been able to extract valuable insights from spatiotemporal crime data.
+The development of an AI-based model for analyzing and predicting crimes in Karnataka holds significant promise for enhancing public safety and law enforcement strategies. By leveraging machine learning algorithms, such as Naïve Bayes, Apriori, DBSCAN clustering, and deep learning models, we have been able to extract valuable insights from spatiotemporal crime data.
 
 The implementation of interactive dashboards, predictive analytics, and beat optimization tools provides law enforcement agencies with actionable intelligence for crime prevention and resource allocation. Furthermore, the visualization of crime hotspots and trends allows for proactive intervention and strategic planning.
 
-Moving forward, continued research and development in the field of crime prediction and analysis will be essential for addressing emerging challenges and evolving criminal behaviors. By leveraging advancements in artificial intelligence, data analytics, and spatial modeling, we can further enhance the effectiveness of law enforcement efforts and contribute to safer communities.
+Moving forward, continued research and development in the field of crime prediction and analysis will be essential for addressing emerging challenges and evolving criminal behaviors. By using advancements in artificial intelligence, data analytics, and spatial modeling, we can further enhance the effectiveness of law enforcement efforts and contribute to safer communities.
 
 
 
